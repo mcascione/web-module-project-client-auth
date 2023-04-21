@@ -6,16 +6,14 @@ const Login = () => {
         <h1>LOGIN</h1>
         <form className="loginForm">
           <div>
-            <label htmlFor="username">USERNAME : </label>
+            <label htmlFor="username">USERNAME:</label>
             <input id="username" />
           </div>
           <div>
-            <label htmlFor="password">PASSWORD : </label>
+            <label htmlFor="password">PASSWORD:</label>
             <input type="password" id="password" />
           </div>
-          <div>
-            <button>SUBMIT</button>
-          </div>
+          <button>SUBMIT</button>
         </form>
       </div>
     );
