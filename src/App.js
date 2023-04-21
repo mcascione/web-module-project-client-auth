@@ -1,31 +1,29 @@
-import React from 'react';
-import './App.css';
-import { Route, Routes, Navigate} from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import { Route, Routes, Navigate } from "react-router-dom";
+import Login from "./Components/Login";
+import FriendsList from "./components/FriendsList";
+import AddFriend from "./components/AddFriend";
 
-const Login = () => {
-  return (
-    <h2>Login</h2>
-  )
-}
-const FriendsList = () => {
-  return (
-    <h2>FriendsList</h2>
-  )
-}
-const AddFriend = () => {
-  return (
-    <h2>AddFriend</h2>
-  )
-}
 function App() {
   return (
     <div className="App">
-    <Routes>
-        <Route path="/" element={<Login />}/>
+      <header>
+        <h2>Friends Database</h2>
+        <nav>
+          <a>LOGIN.</a>
+          <a>FRIENDSLIST.</a>
+          <a>ADDFRIEND.</a>
+          <a>LOGOUT</a>
+        </nav>
+        <hr></hr>
+      </header>
+      <Routes>
+        <Route path="/" element={<Login />} />
         <Route path="/login" element={<Navigate to="/" />} />
         <Route path="/friends" element={<FriendsList />} />
         <Route path="/friends/add" element={<AddFriend />} />
-    </Routes>
+      </Routes>
     </div>
   );
 }
