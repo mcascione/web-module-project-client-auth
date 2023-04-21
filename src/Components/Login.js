@@ -19,10 +19,10 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios
-            .post("http://localhost:9000/api/login", cred)
+        axios.post("http://localhost:9000/api/login", cred)
             .then(res => {
-                localStorage.setItem("token", res.payload);
+                console.log(res);
+                localStorage.setItem("token", res.data.token);
                 navigate("/friends");
             })
             .catch(err => {
