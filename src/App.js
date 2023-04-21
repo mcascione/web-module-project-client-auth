@@ -4,6 +4,7 @@ import { Route, Routes, Navigate, NavLink } from "react-router-dom";
 import Login from "./Components/Login";
 import FriendsList from "./components/FriendsList";
 import AddFriend from "./components/AddFriend";
+import Logout from "./components/Logout";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <NavLink to="/" className="link">LOGIN</NavLink>
           <NavLink to="/friends" className="link">FRIENDSLIST</NavLink>
           <NavLink to="/friends/add" className="link">ADDFRIEND</NavLink>
-          <NavLink to="/" className="link">LOGOUT</NavLink>
+          <NavLink to="/logout" className="link">LOGOUT</NavLink>
         </ul>
         <hr></hr>
       </header>
@@ -23,7 +24,7 @@ function App() {
         <Route path="/login" element={<Navigate to="/" />} />
         <Route path="/friends" element={<FriendsList />} />
         <Route path="/friends/add" element={<AddFriend />} />
-        <Route path="/friends/logout" element={<Navigate to="/" />} />
+        <Route path="/logout" element={<Logout />} />
       </Routes>
     </div>
   );
