@@ -1,10 +1,15 @@
 import React from "react";
 
 const AddFriend = () => {
+   
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
+   
     return (
     <div>
         <h1>AddFriend</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name">FRIEND NAME:</label>
                 <input id="name"/>
