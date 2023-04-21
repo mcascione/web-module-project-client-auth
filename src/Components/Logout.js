@@ -13,7 +13,7 @@ const Logout = () => {
         })
             .then(() => {
                 localStorage.removeItem('token');
-                navigate('/login')
+                navigate('/login');
             })
             .catch(err => {
                 console.log(err);

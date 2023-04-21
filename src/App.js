@@ -5,6 +5,7 @@ import Login from "./Components/Login";
 import FriendsList from "./components/FriendsList";
 import AddFriend from "./components/AddFriend";
 import Logout from "./components/Logout";
+import PrivateRoutes from "./components/PrivateRoutes";
 
 function App() {
   return (
@@ -20,11 +21,13 @@ function App() {
         <hr></hr>
       </header>
       <Routes>
+        <Route element={<PrivateRoutes />}>
+          <Route path="/friends" element={<FriendsList />} />
+          <Route path="/friends/add" element={<AddFriend/>} />
+          <Route path="/logout" element={<Logout/>} />
+        </Route>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Navigate to="/" />} />
-        <Route path="/friends" element={<FriendsList />} />
-        <Route path="/friends/add" element={<AddFriend />} />
-        <Route path="/logout" element={<Logout />} />
       </Routes>
     </div>
   );
